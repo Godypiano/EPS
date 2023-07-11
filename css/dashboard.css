@@ -1,0 +1,60 @@
+.chart-wrapper {
+    height: 350px;
+}
+
+table.dataTable {
+    box-sizing: border-box;
+}
+table.dataTable th {
+    text-align: center;
+}
+
+.card-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-wrapper {
+    height: 45px;
+}
+.image-wrapper > img {
+    height: 100%;
+    max-width: 100%;
+}
+.card-gradient-1 {
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+}
+.card-gradient-2 {
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+@media(min-width: 1200px) {
+
+    .chart-wrapper.chart-modified {
+        height: 390px;
+    }
+}
+
+@media(min-width: 1420px) {
+    button[id$=AppTransporter] {
+        padding-right: calc(1px + 1.25rem) !important;
+        padding-left: calc(1px + 1.25rem) !important;
+    }
+}
+
+@media(min-width: 1200px) and(min-height: 1000px) {
+
+    .chart-wrapper {
+        height: 30vh;
+    }
+
+    .chart-wrapper.chart-modified {
+        height: calc(30vh + 40px);
+    }
+}
+
+table.dataTable th.th_fixed {
+    width: 3rem !important;
+}

@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background: #eeeeee;
+	font-size: 12px;
+	font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #707478;
+}
+@font-face {
+	font-family: 'OpenSan';
+	src:url(../fonts/OpenSans-Regular.ttf);
+	src: local('OpenSan Regular'), local('OpenSan'), url('../fonts/OpenSans-Regular.ttf') format('truetype');
+}
+.wrapper {
+  position: relative;
+  /*width: 100%;*/
+
+  
+}
+.navbar-style{
+	height:55px;
+	padding-top:3px;
+	margin-bottom:5px;
+	background-color: #dbdbdb;
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.59);
+	vertical-align:middle;
+	
+	
+}
+.row .img-style{
+width:41px;	
+margin-right:5px;
+	
+}
+
+.navBar-marginTop{
+	margin-top:-1px;
+}
+.minus-margin{
+
+margin-right:-30px;
+}
+
+

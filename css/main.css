@@ -1,0 +1,52 @@
+* {
+  color: #1a1a1a;
+}
+
+@media (max-width: 61.99875rem) {
+  .container,
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    padding: 0 0.5rem;
+  }
+}
+
+@media (min-width: 62rem) {
+  #kt_header .container-fluid {
+    padding: 0 0.25rem;
+  }
+}
+
+.main-area {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e7faff), to(#cef4ff));
+  background-image: linear-gradient(360deg, #e7faff, #cef4ff);
+}
+
+.text-gray-400 {
+  color: #434356 !important;
+}
+
+.text-breadcrumbs {
+  color: #244af5 !important;
+}
+
+.system-title h1 {
+  color: #072093 !important;
+}
+
+.menu-title-gray-600 .menu-item .menu-link .menu-title {
+  color: #434356;
+}
+
+.menu-icon-gray-400
+.menu-item
+.menu-link
+.menu-icon
+.svg-icon
+svg
+[fill]:not(.permanent):not(g) {
+  fill: #383848;
+}

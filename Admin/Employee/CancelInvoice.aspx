@@ -1,0 +1,145 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CancelInvoice.aspx.cs" MasterPageFile="~/Default_custom.Master" Inherits="PresentationLayer.Admin.Employee.CancelInvoice" %>
+
+<%@ MasterType VirtualPath="~/Default_custom.master" %>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link href="/Styles/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script language="javascript" type="text/javascript">
+        $(function () {
+            $('#<%=txtSearch.ClientID%>').autocomplete({
+                source: function (request, response) {
+                    $.ajax({
+                        url: "CancelInvoice.aspx/GetTickets",
+                        data: "{ 'Ticket':'" + request.term + "'}",
+                        dataType: "json",
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        success: function (data) {
+                            response($.map(data.d, function (item) {
+                                return { value: item }
+                            }))
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            alert(textStatus);
+                        }
+                    });
+                }
+            });
+        });
+</script>
+    <div>
+
+
+<!--begin::Toolbar-->
+<div class="toolbar" id="kt_toolbar">
+    <div
+      class="container-fluid d-flex flex-stack flex-wrap flex-sm-nowrap px-4"
+    >
+      <!--begin::Info-->
+      <div
+        class="d-flex flex-column align-items-start justify-content-center flex-wrap me-2"
+      >
+        <!--begin::Title-->
+        <h1 class="text-dark fw-bolder my-1 fs-2"> 
+            <asp:Label runat="server" ID="lbldesi" CssClass="hd1"></asp:Label>
+          Cancel Invoice
+          <small class="text-muted fs-6 fw-normal ms-1"></small>
+        </h1>
+        <!--end::Title-->
+        <!--begin::Breadcrumb-->
+        <ul class="breadcrumb fw-bold fs-base my-1">
+          <li class="breadcrumb-item text-breadcrumbs">
+            <a href="Dashboard.aspx" class="text-breadcrumbs text-hover-primary"
+              >Home</a
+            >
+          </li>
+          <li class="breadcrumb-item text-dark">Cancel Invoice</li>
+        </ul>
+        <!--end::Breadcrumb-->
+      </div>
+      <!--end::Info-->
+    </div>
+  </div>
+  <!--end::Toolbar-->
+
+  <!--begin::Post-->
+  <div class="post fs-6 d-flex flex-column-fluid" id="kt_post">
+    <!--begin::Container-->
+    <div class="container px-3">
+      <!--begin::Row-->
+      <div class="row g-xl-8">
+        <!--begin::Col-->
+        <div class="col-xl-12">
+          <!--begin::Chart Widget 1-->
+          <div class="card card-xl-stretch mb-5 mb-xl-8">
+            <!--begin::Body-->
+            <div class="card-body d-flex justify-content-between flex-column">
+              <div class="row">
+                <div
+                  class="form-group mx-0 mb-3"
+                >
+                  <label class="col-auto ps-0 label-135px"
+                    >Enter Invoice No.
+                    <span class="red">*</span>
+                    </label>
+                  <asp:TextBox
+                    CssClass="form-control col-md-10 col-lg-9 col-xl-8"
+                    runat="server"
+                    ID="txtSearch"
+                    MaxLength="15"
+                  ></asp:TextBox
+                  ><br />
+                  <asp:RequiredFieldValidator
+                    runat="server"
+                    ID="rfvSearch"
+                    CssClass="red"
+                    Display="Dynamic"
+                    ControlToValidate="txtSearch"
+                    ErrorMessage="Please enter invoice number"
+                  ></asp:RequiredFieldValidator>
+                </div>
+                <div
+                  class="form-group mx-0 mb-3"
+                >
+                  <label class="col-auto ps-0 label-135px">Comments
+                      <span class="red">*</span>
+                      </label>
+                  <asp:TextBox
+                    CssClass="form-control col-md-10 col-lg-9 col-xl-8"
+                    runat="server"
+                    TextMode="MultiLine"
+                    ID="txtCMT"
+                    MaxLength="450"
+                    Rows="3"
+                    Columns="40"
+                  ></asp:TextBox
+                  ><br />
+                  <asp:RequiredFieldValidator
+                    runat="server"
+                    ID="RequiredFieldValidator1"
+                    CssClass="red"
+                    Display="Dynamic"
+                    ControlToValidate="txtCMT"
+                    ErrorMessage="Please enter comments"
+                  ></asp:RequiredFieldValidator>
+                </div>
+              </div>
+              <div class="form-group mb-3 d-flex justify-content-end">
+                <asp:Button
+                  CssClass="btn btn-primary btn-sm white-space-wrap"
+                  runat="server"
+                  ID="btnSearch"
+                  Text="Cancel Invoice"
+                  OnClick="btnSearch_Click"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </div>
+</asp:Content>

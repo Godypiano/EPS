@@ -1,0 +1,61 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.mainNav {
+	background-color: #679744 !important;
+}
+#mainNavigation.navbar-default {
+	font-size: 12px;
+	background-color: rgba(34, 209, 92, 1) !important;
+	border-width: 0px;
+	border-radius: 0px;
+	margin-top: -5px;
+}
+#mainNavigation a.navbar-brand {
+	color: #dbdbdb;
+	height: 50px;
+	background-color: #6d717b;
+	font-size: 13px;
+}
+#mainNavigation a.navbar-brand:hover {
+	color: #FFFFFF;
+}
+#moduleTitle a.navbar-brand {
+	color: #245102;
+	background-color: #9ab785;
+	margin-left: 2px;
+	font-size: 16px;
+	width: 100%;
+	text-transform: uppercase;
+	font-family: "Open Sans", "Open Sans Extrabold", "Open Sans Light", "Open Sans Semibold";
+	font-weight: 700;
+	padding-right: 50px;
+}
+#moduleTitle a.navbar-brand:hover {
+	color: #245102;
+}
+#mainMenuItems .nav.navbar-nav li:first-child a {
+	border-right: 0px;
+	/* background: url(../imgs/arrow_bg.png) 0 0; */
+	background-repeat: no-repeat;
+	background-position: -1% 50%;
+	background-color: transparent;
+}
+#mainMenuItems .nav.navbar-nav>li>a {
+	color: #e4ffd0 !important;
+	font-size: 14px;
+	text-transform: uppercase;
+	padding-right: 30px;
+	padding-left: 30px;
+	border-right: 1px solid #81ae60;
+}
+#mainMenuItems .nav.navbar-nav>li>a:hover {
+	background-color: #508e22;
+	color: #fff
+}
+#mainMenuItems .nav.navbar-nav li:last-child a {
+	border-right: 0px;
+}
+#mainMenuItems .nav.navbar-nav>li.active a {
+	background-color: #508e22 !important;
+	color: #fff !important;
+}

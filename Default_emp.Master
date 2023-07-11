@@ -1,0 +1,181 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default_emp.Master.cs" Inherits="PresentationLayer.Default1_emp" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ALPS</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.js" type="text/javascript"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.8.17/jquery-ui.js" type="text/javascript"></script>
+    <link href="/Styles/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/PopupMessage.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/menu.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/HRMS.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="Default-Style" content="theme" />
+    <link href="/Styles/header.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/theme.css" title="theme" rel="stylesheet" type="text/css" />
+    <link href="/Styles/login_test123.css" rel="stylesheet" type="text/css" />
+    <script src="/Scripts/Vertical.js" type="text/javascript"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <ajaxToolkit:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server" EnablePartialRendering="true" EnableViewState="true" EnablePageMethods="true">
+        
+    </ajaxToolkit:ToolkitScriptManager>
+        <div>
+            <table>
+            <tr>
+                <td style="width:1%"></td>
+                <td style="width:98%">
+
+        <div class="headmain">
+            <div>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <!--header-->
+                            <div class="headerlogo">
+                              
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    
+                </tbody>
+            </table>
+                </div>
+            <table>
+                <tr>
+                    <td class="logobelowheightlow" style="width:100%">
+
+                    </td>
+                </tr>
+            </table>
+            <div class="logobelowheight">  
+                     <table>
+                         <tr>
+                             <td class="weltxt" style="width:50%;text-align:left">
+                                 Welcome: <asp:Label ID="lblwcome" runat="server" class="weltxt"></asp:Label>
+                             </td>
+                             <td class="weltxt" style="width:50%;text-align:right">
+                                 <asp:Label ID="lbllout" runat="server"><a href="logout.aspx">Logout</a></asp:Label>&nbsp;
+                             </td>
+                         </tr>
+                         <tr>
+                             <td colspan="2" style="height:2px;"></td>
+                         </tr>
+                         <tr>
+                             <td class="weltxt" style="width:50%;text-align:left">
+                               <asp:Label ID="lblltime" runat="server" class="weltxt">Login Time: <%=DateTime.Now %></asp:Label>
+                             </td>
+                             <td style="width:50%;text-align:right">
+                                 
+                             </td>
+                         </tr>
+                     </table>          
+            </div>
+            <table>
+                <tr>
+                    <td class="logobelowheightlow" style="width:100%">
+
+                    </td>
+                </tr>
+            </table>
+            
+      <table>
+         
+          <tr>
+              <td style="width:16%; background-color:#7D8184;">
+                  <ul id="menu-v">
+                    <li><asp:Label runat="server" ID="lblDB"><a href="Dashboard.aspx">Inbox</a></asp:Label></li>
+                    <li><asp:Label runat="server" ID="lblOB"><a href="Outbox.aspx">Outbox</a></asp:Label></li>
+                    <li><asp:Label runat="server" ID="lblAU"><a href="AssignUser.aspx">Assign User</a></asp:Label></li>    
+                    <!--<li><asp:Label runat="server" ID="lblRS"><a href="RouteSurvey.aspx">Route Survey</a></asp:Label></li>-->
+                    <!--<li><asp:Label runat="server" ID="lblAC"><a href="Archive.aspx">Archive</a></asp:Label></li>-->
+                    <li><asp:Label runat="server" ID="lblCP"><a href="ChangePassword.aspx">Change Password</a></asp:Label></li>
+                    
+                </ul>
+              </td>
+              <td style="width:84%">
+                  <table>
+                      <tr>
+                          <td style="width:100%;height:15px;" colspan="4"></td>
+                      </tr>
+                      <tr>
+                          <td style="width:5%;"></td>
+                          <td style="width:30%;">
+                              <a class="navigationbar"><asp:Label runat="server" ID="lbl_hd"></asp:Label></a>&nbsp; &gt;&gt; &nbsp;<a class="navigationbar"><asp:Label runat="server" ID="lbl_tle"></asp:Label></a>
+                          </td>
+                          <td style="width:64%;">
+                              <a class="navigationbar"><asp:Label runat="server" ID="lbl_ts"></asp:Label></a>&nbsp;&nbsp;&nbsp;<a class="navigationbar"><asp:Label runat="server" ID="lbl_sch"></asp:Label></a>&nbsp;&nbsp;&nbsp;
+                              <a class="navigationbar"><asp:Label runat="server" ID="lbl_vt"></asp:Label></a>&nbsp;&nbsp;&nbsp;<a class="navigationbar"><asp:Label runat="server" ID="lbl_di"></asp:Label></a>&nbsp;&nbsp;&nbsp;
+                              <a class="navigationbar"><asp:Label runat="server" ID="lbl_dr"></asp:Label></a>&nbsp;&nbsp;&nbsp;<a class="navigationbar"><asp:Label runat="server" ID="lbl_dp"></asp:Label></a>&nbsp;&nbsp;&nbsp;
+                          </td>
+                          <td style="width:1%;"></td>
+                      </tr>
+                      <tr>
+                          <td style="width:100%;height:20px;" colspan="4"></td>
+                      </tr>
+                  </table>
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                 </asp:ContentPlaceHolder>
+              </td>
+             
+          </tr>
+      </table>
+        <table>
+                <tr>
+                    <td style="width: 100%; height: 10px; background-image: url('/images/head.jpg'); background-repeat: repeat;background-color: #1877AF;">
+
+                    </td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <td style="width: 100%; height: 25px; background-image: url('/images/Next2h.jpg'); background-repeat: repeat;background-color: #525559;">
+
+                    </td>
+                </tr>
+            </table>
+            <div class="footer">
+              <div>
+               <table style="height: 60px; line-height: 8px;width:100%;">
+                            <tbody>
+                                <tr>
+                                    <td style="width:90%;font-size:12px;vertical-align:middle;padding-left:110;text-align:center;">
+                                        <p >
+                                            © 2015 ALPS. All Rights Reserved.
+                                        </p>
+                                    </td>
+                                    <td style="width: 10%;text-align:right;vertical-align:top;" rowspan="2">
+                                       <a href="http://www.bizlogicsolutions.com/" target="_blank">  <img alt="logo" style="float: inherit;" src="/Images/bizlogiclogo.png"" height="45px" width="90px"/></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 90%;font-size: 12px;vertical-align: top;padding-left: 110;text-align:center;">
+                                        <span>Designed & Developed By - <a href="http://www.bizlogicsolutions.com/" target="_blank">Biz-Logic Solutions Ltd</a>.</span>
+                                    </td>
+                                    <td style="width:10%;text-align:right" ></td>
+                                </tr>
+                            </tbody>
+                        </table> 
+                     </div>
+                 <div class="clear">
+                </div> 
+            </div> 
+
+
+        </div>
+                    
+                </td>
+                <td style="width:1%"></td>
+            </tr>
+        </table>
+        </div>
+    </form>
+</body>
+</html>
